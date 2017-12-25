@@ -6,6 +6,5 @@ const sc$ = Observable
   .map(event => +event.target.innerWidth > 800 ? { type: 'desktop' } : { type: 'mobile' })
 
 shiftBlock.init({
-  // hot: true,
   screen$: sc$
 })
