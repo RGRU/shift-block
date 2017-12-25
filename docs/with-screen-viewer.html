@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
+    <title>shift block with screen viewer</title>
+    <style>
+    .shift {
+      width: 300px;
+      height: 300px;
+      display: none;
+      box-shadow: 0 0 3px #ccc;
+    }
+    .shift[data-is-show] {
+      display: block;
+    }
+    </style>
+</head>
+<body>
+    <h1>Demo with screen viewer | to <a href="/index.html">see: default example</a></h1>
+    <div class="shift" data-shift-id="test" data-shift-type="desktopFull" style="background: deepskyblue"></div>
+    <div class="shift" data-shift-id="test" data-shift-type="desktop" style="background: green" data-is-show>test</div>
+    <div class="shift" data-shift-id="test" data-shift-type="tabletLandscape" style="background: blue"></div>
+    <div class="shift" data-shift-id="test" data-shift-type="tablet" style="background: yellow"></div>
+    <div class="shift" data-shift-id="test" data-shift-type="mobile" style="background: tomato"></div>
+<script type="text/javascript" src="with-screen-viewer.js"></script></body>
+</html>

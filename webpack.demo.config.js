@@ -3,7 +3,10 @@ const path = require('path')
 
 module.exports = {
 
-  entry: path.join(__dirname, 'src/scripts/index.js'),
+  entry: {
+    index: path.join(__dirname, 'src/scripts/index.js'),
+    'with-screen-viewer': path.join(__dirname, 'src/scripts/with-screen-viewer.js')
+  },
 
   output: {
     path: path.join(__dirname, 'docs'),
@@ -31,9 +34,16 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'shift block demo',
+      title: 'shift block',
       filename: path.join(__dirname, 'docs/index.html'),
-      template: 'src/index.html'
+      template: 'src/index.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'shift block with screen viewer',
+      filename: path.join(__dirname, 'docs/with-screen-viewer.html'),
+      template: 'src/with-screen-viewer.html',
+      chunks: ['with-screen-viewer']
     })
   ],
 

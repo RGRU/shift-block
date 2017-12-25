@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
-    <title>ScreenViewer demo</title>
+    <title>shift block</title>
+    <style>
+    .shift {
+      width: 300px;
+      height: 300px;
+      display: none;
+      box-shadow: 0 0 3px #ccc;
+    }
+    .shift[data-is-show] {
+      display: block;
+    }
+    </style>
 </head>
 <body>
-    <div>test</div>
-<script type="text/javascript" src="main.js"></script></body>
+    <h1>Default use | to <a href="/with-screen-viewer.html">see: example with screen viewer demo</a></h1>
+    <div class="shift" data-shift-id="test" data-shift-type="desktop" style="background: green" data-is-show>test</div>
+    <div class="shift" data-shift-id="test" data-shift-type="mobile" style="background: red"></div>
+<script type="text/javascript" src="index.js"></script></body>
 </html>

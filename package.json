@@ -5,7 +5,7 @@
   "author": "RGRU team | nanomen <dev@rg.ru> (https://github.com/RGRU/)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RGRU/ScreenViewer.git"
+    "url": "git+https://github.com/RGRU/shift-block.git"
   },
   "main": "dist/shift-block.js",
   "files": [
